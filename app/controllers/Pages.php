@@ -28,5 +28,13 @@ class Pages extends Controller {
         $this->view('getUsername');
     }
 
+    public function detailplante(){
+        $this->view('detailplante');
+    }
+
+    public function plante(){
+        $this->view('plante');
+    }
+
 
 }

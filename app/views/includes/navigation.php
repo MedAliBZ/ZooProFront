@@ -19,7 +19,8 @@
                                             <ul id="navigation">
                                                 <li><a href="<?php echo URLROOT ?>/Pages/index">Home</a></li>
                                                 <li><a href="#">About</a></li>
-                                                <li><a href="#">What we Do</a></li>
+
+                                                <li><a href="<?php echo URLROOT ?>/planteC/afficherList">végétation</a></li>
                                                 <li><a href="#">Projects</a></li>
                                                 <li><a href="#">Blog</a>
                                                     <ul class="submenu">
