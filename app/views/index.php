@@ -53,12 +53,10 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".2s">Environment</h1>
-                                    <P data-animation="fadeInUp" data-delay=".4s">Provide us a green and healthy life<br> we need to protect </P>
+                                    <h1 data-animation="fadeInUp" data-delay=".2s">ZooPro</h1>
+                                    <P data-animation="fadeInUp" data-delay=".4s">Le paradies des animaux<br> Protection des animaux et des plantes </P>
                                     <!-- Hero-btn -->
-                                    <div class="hero__btn">
-                                        <a href="#" class="hero-btn mb-10" data-animation="fadeInUp" data-delay=".8s">Join Us Now</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -70,12 +68,10 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".2s">Environment</h1>
-                                    <P data-animation="fadeInUp" data-delay=".4s">Provide us a green and healthy life<br> we need to protect </P>
+                                    <h1 data-animation="fadeInUp" data-delay=".2s">Environnement</h1>
+                                    <P data-animation="fadeInUp" data-delay=".4s">Une meilleure vie pour les animaux<br> qui ont besoin d'une protection </P>
                                     <!-- Hero-btn -->
-                                    <div class="hero__btn">
-                                        <a href="#" class="hero-btn mb-10" data-animation="fadeInUp" data-delay=".8s">Join Us Now</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -87,12 +83,10 @@
                         <div class="row">
                             <div class="col-xl-8 col-lg-8 col-md-8 col-sm-10">
                                 <div class="hero__caption">
-                                    <h1 data-animation="fadeInUp" data-delay=".2s">Environment</h1>
-                                    <P data-animation="fadeInUp" data-delay=".4s">Provide us a green and healthy life<br> we need to protect </P>
+                                    <h1 data-animation="fadeInUp" data-delay=".2s">Environnement</h1>
+                                    <P data-animation="fadeInUp" data-delay=".4s">Une vie plus confortable<br> et plus ecologue </P>
                                     <!-- Hero-btn -->
-                                    <div class="hero__btn">
-                                        <a href="#" class="hero-btn mb-10" data-animation="fadeInUp" data-delay=".8s">Join Us Now</a>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
