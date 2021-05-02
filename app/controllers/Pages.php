@@ -36,5 +36,14 @@ class Pages extends Controller {
         $this->view('plante');
     }
 
+    public function detailAnimal() {
+        $this->view('detailAnimal');
+    }
+
+    public function animaux() {
+        $this->view('animaux');
+    }
+
+
 
 }
