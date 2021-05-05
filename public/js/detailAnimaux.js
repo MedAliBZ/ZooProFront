@@ -43,3 +43,48 @@ document.getElementById('QRCodePic').src="http://api.qrserver.com/v1/create-qr-c
 //set email
 document.querySelector("#email").value = data[8];
 
+
+
+function validateString(str) {
+    if (str.match(/[a-z]/g))
+      return true;
+    else
+      return false
+  }
+
+  
+
+document.getElementById('submit').addEventListener('click', (e) => {
+
+    let reclamation = document.getElementById("reclamation").value;
+    console.log(reclamation);
+    let errormsg1 = document.getElementById("errormsg1");
+  
+    
+    if (!validateString(reclamation) || reclamation.length<10 ) {
+
+        errormsg1.style.display = "flex";
+        errormsg1.innerHTML = "merci d'ecrire juste des lettres alphabétiques et supérieur à 10";
+        document.getElementById("reclamation").parentElement.style.border = "1px solid red";
+        e.preventDefault();
+      }
+    
+
+})
+
+
+
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -25.344, lng: 131.036 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}

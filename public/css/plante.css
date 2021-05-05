@@ -79,7 +79,7 @@
 .listInfo {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
-  max-width: unset;
+  max-width: fit-content;
   padding: 5%;
   font-size: 20px;
   font: bold;
@@ -132,32 +132,4 @@
   border-radius: 20px;
   cursor: text !important;
 }
-
-
-@media print {
-  .sidebar-menu {
-    display: none;
-  }
-  .input-fieldSearch {
-    display: none;
-  }
-  .btn {
-    display: none;
-    margin-left: 80%;
-    margin-bottom: 30%;
-  }
-  #themeButton {
-    display: none;
-  }
-}
-
-.fa{
-  cursor: pointer;
-  margin-left: 540px;
-}
-
-.fa:hover{
-
-  color: #018171
-
-}
+/*# sourceMappingURL=plante.css.map */

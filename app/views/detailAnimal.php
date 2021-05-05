@@ -73,32 +73,41 @@
             <div class="support-wrapper align-items-center">
                 <div class="left-content">
                     <!-- section tittle -->
-                    <div class="section-tittle section-tittle2 mb-30" style="margin: 10px;">
+                    <div class="section-tittle section-tittle2 mb-30" style="margin-top: -30%;">
                         <span>Quelque détails sur l'animal :</span>
                     </div>
 
-                    <div class="col-md-4 mt-sm-30 listInfo" >
-                            <ul class="unordered-list ">
-                                <li> Id animal : <span id="idAnimal"></span></li>
-                                <li> Nom Animal : <span id="nomAnimal"></span></li>
-                                <li> Type Animal : <span id="typeAnimal"></span></li>
-                                <li> Age Animal : <span id="ageAnimal"></span></li>
-                                <li> Pays de l'animal : <span id="paysAnimal"></span></li>
-                            </ul>
+                    <div class="col-md-4 mt-sm-30 listInfo">
+                        <ul class="unordered-list ">
+                            <li> Id animal : <span id="idAnimal"></span></li>
+                            <li> Nom Animal : <span id="nomAnimal"></span></li>
+                            <li> Type Animal : <span id="typeAnimal"></span></li>
+                            <li> Age Animal : <span id="ageAnimal"></span></li>
+                            <li> Pays de l'animal : <span id="paysAnimal"></span></li>
+                        </ul>
                     </div>
                     <div class="QRCodeContainer">
-                     <i class="fas fa-qrcode iconQR"> Scan me :</i>
-                    <img src="" id="QRCodePic" class="">
+                        <i class="fas fa-qrcode iconQR"> Scan me :</i>
+                        <img src="" id="QRCodePic" class="">
                     </div>
                 </div>
                 <div class="right-content">
 
-                   <form action="<?php echo URLROOT; ?>/animauxC/SendEmail" id="formEmail" method="POST" style="margin-top: 5%;">
-                   <input type="email" id="email" name="email" style="display: none;" readonly>
-                   <input type="submit" class="btn header-btn" id="donationButton" value="Donate for this animal">
+                    <form action="<?php echo URLROOT; ?>/animauxC/SendEmail" id="formEmail" method="POST" class="form-container">
+                        <h2> Merci pour tous vos réclamations</h2>
+                        <div class="formCss">
+                            <input type="email" id="email" name="email" readonly />
+                        </div>
+                        <h4> vous recevrez un mail dés que votre réclamation est ajouté</h4>
+                        <div class="formCss">
+                            <input type="text" id="reclamation" name="reclamation" placeholder="écrire votre réclamation ici ..." />
+                        </div>
+                        <div class="errormsg" id="errormsg1"></div>
+                        <br>
+                        <button type="submit" class="btn header-btn" id="submit">Submit</button>
 
-                   </form>
-                   
+                    </form>
+
                     <!-- img -->
                     <div class="right-img">
                         <img id="animalImage" src="<?php echo URLROOT ?>" alt="">
@@ -113,17 +122,21 @@
                     </div>
                 </div>
             </div>
+            <div id="map"></div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" async></script>
+
+
         </section>
         <!-- table start -->
         <section class="regimeContainer">
             <form action="<?php echo URLROOT; ?>/regimeC/afficherList" method="post" class="afficherRegime">
-               <input type="text" id="idRegime" name="id" style="display: none;">
-               <input class="genric-btn primary-border e-large" type="submit" value="Afficher régime " />  
+                <input type="text" id="idRegime" name="id" style="display: none;">
+                <input class="genric-btn primary-border e-large" type="submit" value="Afficher régime " id="regimeButton" />
             </form>
-            <div class="espace section-top-border">   
-                        <?php if (isset($data['tab'])) {
-                            echo $data['tab'];
-                        } ?>
+            <div class="espace section-top-border">
+                <?php if (isset($data['tab'])) {
+                    echo $data['tab'];
+                } ?>
             </div>
         </section>
 

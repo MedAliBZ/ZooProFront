@@ -9,6 +9,7 @@ class animauxM
     private $status;
     private $regimeAlimentaire;
     private $image;
+   // private $reclamation;
 
     public function __construct()
     {
@@ -66,6 +67,21 @@ class animauxM
 
         return $this->db->resultSet();
        
+    }
+
+    public function addReclamation($data)
+    {
+        $this->db->query('INSERT INTO reclamation (reclamation,idUser) VALUES(:reclamation,:idUser)');
+
+        //Bind values
+        $this->db->bind(':reclamation', $data['reclamation']);
+        $this->db->bind(':idUser', $_SESSION['id']);
+        //Execute function
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
