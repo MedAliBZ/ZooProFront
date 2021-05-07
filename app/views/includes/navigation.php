@@ -21,6 +21,8 @@
                                                 <li><a href="<?php echo URLROOT ?>/animauxC/afficherList">Animaux</a></li>
 
                                                 <li><a href="<?php echo URLROOT ?>/planteC/afficherList">végétation</a></li>
+
+                                                <li><a href="<?php echo URLROOT ?>/enclos/afficherList">Enclos</a></li>
                                                 <li><a href="#">Projects</a></li>
                                                 <li><a href="#">Blog</a>
                                                     <ul class="submenu">
