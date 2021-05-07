@@ -44,6 +44,14 @@ class Pages extends Controller {
         $this->view('animaux');
     }
 
+     public function enclos() {
+        $this->view('enclos');
+    }
+
+    public function animauxInEnclos() {
+        $this->view('animauxInEnclos');
+    }
+
 
 
 }
