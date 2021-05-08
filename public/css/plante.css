@@ -79,7 +79,7 @@
 .listInfo {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
-  max-width: fit-content;
+  max-width: unset;
   padding: 5%;
   font-size: 20px;
   font: bold;
@@ -132,4 +132,59 @@
   border-radius: 20px;
   cursor: text !important;
 }
-/*# sourceMappingURL=plante.css.map */
+
+
+@media print {
+  .sidebar-menu {
+    display: none;
+  }
+  .input-fieldSearch {
+    display: none;
+  }
+  .btn {
+    display: none;
+    margin-left: 80%;
+    margin-bottom: 30%;
+  }
+  #themeButton {
+    display: none;
+  }
+}
+
+.button{
+  cursor: pointer;
+  border-radius: 20px;
+  border: solid 2px transparent;
+  background-color: #79e774;
+  margin-left: 10px;
+}
+
+.button:hover{
+
+  color: #018171
+
+}
+
+.buttonvid{
+  cursor: pointer;
+  border-radius: 20px;
+  border: solid 2px transparent;
+  background-color: #79e774;
+  margin-left: 10px;
+  margin-bottom: 19px;
+
+  padding: 1%;
+    font-size: 15px ;
+    border: solid 1px white;
+    border-radius: 10px;
+    margin: 2%;
+    cursor: pointer;
+    color: rgb(1, 129, 113) ;
+    font: bold;
+}
+
+.buttonvid:hover{
+
+  color: #018171
+
+}

@@ -100,15 +100,11 @@
                             </ul>
 
                            
-                            <i onclick="myfunction(this)" class="fa fa-thumbs-up"></i>
+                           <button class="button" id="incbuttonlike" onclick="incrementlike()"><h7 id="incrementlike">11</h7> j'aime </button>
 
-                             <script>
-                                function myfunction(x) {
-
-                                        x.classList.toggle(class="fa-thumbs-down");
-
-                                 }
-                              </script>
+                           
+                           <button class="button" id="incbuttondislike" onclick="incrementdislike()"><h7 id="incrementdislike">19</h7> je n'aime pas </button>
+                          
                    
                     </div>
                     
@@ -240,7 +236,7 @@
     </div>
 
     <!-- JS here -->
-
+    
     <script src="<?php echo URLROOT ?>/public/assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="<?php echo URLROOT ?>/public/assets/js/vendor/jquery-1.12.4.min.js"></script>

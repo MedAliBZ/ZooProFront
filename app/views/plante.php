@@ -39,6 +39,9 @@
             </div>
         </div>
     </div>
+
+   
+
     <!-- Preloader Start -->
     <?php
     require APPROOT . '/views/includes/navigation.php';
@@ -49,13 +52,31 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
+                        <p  >Le temps en ce moment :   </p>
+
+<p id="demo"></p>
+
+
+<script>
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+  var d = new Date();
+  var t = d.toLocaleTimeString();
+  document.getElementById("demo").innerHTML = t;
+}
+
+</script>
+
                             <div class="hero-cap hero-cap2 pt-70">
                                 <h2>plante</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
+                                        
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                                         <li class="breadcrumb-item"><a href="#">les plantes</a></li>
                                     </ol>
+                                    
                                 </nav>
                             </div>
                         </div>
@@ -63,9 +84,12 @@
                 </div>
             </div>
         </div>
+        
         <div class="rechercheStyle">
         <input type="text" id="rechercher" class="button button-contactForm boxed-btn " placeholder="  Rechercher ">
+        
         </div>
+        
         <!-- Hero End -->
         <div class="card">
            
@@ -74,10 +98,26 @@
                 echo $data['tab'];
             } ?>
 
+            
+                    
+        <p style="color:gray" >Appuyer ici pour savoir plus sur les plantes en regardant cette playlist :    </p>
+
+            <button class="buttonvid"  onclick="myFunction()" >Vidéo</button>
+
+            <script>
+            function myFunction() {
+        window.open("https://www.youtube.com/watch?v=prxRlotlBEQ&list=PLhtb1FygIDa4rtXDJoXh_zMpe9m8ayCCu&ab_channel=NaturactivePierreFabre");
+            }
+        </script>
+
+    
+
+
 
         </div>
 
-
+       
+            
 
     </main>
     <footer>

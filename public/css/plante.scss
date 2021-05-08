@@ -120,3 +120,33 @@
     border-radius: 20px;
     cursor:text !important;
 }
+
+.buttonvid{
+    cursor: pointer;
+    border-radius: 20px;
+    border: solid 2px transparent;
+    background-color: #79e774;
+    margin-left: 10px;
+    margin-bottom: 19px;
+    
+    padding: 3%;
+    font-size: 20px ;
+    border: solid 1px white;
+    border-radius: 20px;
+    margin: 2%;
+    cursor: pointer;
+    color: rgb(1, 129, 113) ;
+    font: bold;
+    &:hover 
+    {
+      border-color: rgb(1, 129, 113);
+      color: rgb(1, 129, 113) ;
+      
+    } 
+  }
+  
+  .buttonvid:hover{
+  
+    color: #018171
+  
+  }
