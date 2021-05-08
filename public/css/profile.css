@@ -1,0 +1,23 @@
+.profilePic {
+    background-size: cover;
+    background-position: center;
+    border-radius: 5%;
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.label-file {
+    cursor: pointer;
+    color: var(--accent);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.label-file:hover {
+    color: var(--accent);
+}
+
+.input-file {
+    display: none;
+}

@@ -28,16 +28,18 @@ if (!isset($_SESSION['id']))
     <link rel="stylesheet" href="<?php echo URLROOT ?>/public/assets/css/slick.css">
     <link rel="stylesheet" href="<?php echo URLROOT ?>/public/assets/css/nice-select.css">
     <link rel="stylesheet" href="<?php echo URLROOT ?>/public/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/profile.css">
     <style>
-    input[value="Supprimer"]{
-        color: red !important;
-        border-color: red;
-    }
-    input[value="Supprimer"]:hover{
-        background-color: red;
-        color: white;
-        border-color: red;
-    }
+        input[value="Supprimer"] {
+            color: red !important;
+            border-color: red;
+        }
+
+        input[value="Supprimer"]:hover {
+            background-color: red;
+            color: white;
+            border-color: red;
+        }
     </style>
 </head>
 <!--? Preloader Start -->
@@ -79,12 +81,25 @@ require APPROOT . '/views/includes/navigation.php';
     <!-- Hero End -->
     <!--?  Contact Area start  -->
     <section class="contact-section">
+        <div class="container" style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom: 50px;">
+            <h2 class="contact-title">Photo de profile</h2>
+            <form method="POST" action="<?php echo URLROOT; ?>/users/deleteUpdatePic" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                <div class="profilePic" style="background-image: url('<?php echo URLROOT; ?>/Images/<?php echo $_SESSION['image']; ?>');"></div>
+                <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
+                    <label for="file" class="label-file">Choisir une image</label>
+                    <input type="file" id="file" name="file" class="input-file" accept="image/x-png,image/gif,image/jpeg">
+                </div>
+                <div style="margin-top: 10px;display:flex;">
+                    <input name="save" type="submit" class="button boxed-btn" value="Sauvegarder" style="margin-right: 1%;" />
+                    <input name="delete" type="submit" class="button boxed-btn" value="Supprimer" style="margin-left: 1%;" />
+                </div>
+            </form>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-9">
                     <h2 class="contact-title">Mes informations</h2>
                 </div>
-
                 <div class="col-lg-8">
                     <form class="form-contact contact_form" action="<?php echo URLROOT ?>/users/update" method="post">
                         <div class="row">
@@ -104,12 +119,14 @@ require APPROOT . '/views/includes/navigation.php';
                                     <input class="form-control valid" name="password" type="password" placeholder="Password" required>
                                 </div>
                             </div>
-                            <div class="col-sm-8" style="color: red;" id="errorPop"><?php if(isset($data['error'])){echo $data['error'];} ?></div>
+                            <div class="col-sm-8" style="color: red;" id="errorPop"><?php if (isset($data['error'])) {
+                                                                                        echo $data['error'];
+                                                                                    } ?></div>
                         </div>
 
                         <div class="form-group mt-3">
-                            <input style='margin-bottom:50px;margin-right:15px;' type="submit" class="button button-contactForm boxed-btn" id="sauvegarderB" value="Sauvegarder"/>
-                            <input type="submit" class="button boxed-btn" name="delete" value="Supprimer"/>
+                            <input style='margin-bottom:50px;margin-right:15px;' type="submit" class="button button-contactForm boxed-btn" id="sauvegarderB" value="Sauvegarder" />
+                            <input type="submit" class="button boxed-btn" name="delete" value="Supprimer" />
                         </div>
                     </form>
                 </div>
@@ -135,10 +152,12 @@ require APPROOT . '/views/includes/navigation.php';
                                 </div>
                             </div>
                             <div class="col-12" style="color: red;" id='error-msgPass'>
-                                <?php if(isset($data['errorPass'])){echo $data['errorPass'];} ?>
+                                <?php if (isset($data['errorPass'])) {
+                                    echo $data['errorPass'];
+                                } ?>
                             </div>
                         </div>
-                        
+
                         <div class="form-group mt-3">
                             <button type="submit" class="button button-contactForm boxed-btn" id="card-changerPass">Changer</button>
                         </div>

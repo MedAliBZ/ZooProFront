@@ -1,3 +1,7 @@
+document.querySelector(".input-file").addEventListener("change",()=>{
+    document.querySelector('.profilePic').style.backgroundImage= `url('../Images/${document.querySelector(".input-file").value.replace('C:\\fakepath\\','')}')`;
+})
+
 let cardNewPass = document.getElementById('card-newPass');
 let cardConfirmPass = document.getElementById('card-confirmPass');
 let cardButton = document.getElementById('card-changerPass');

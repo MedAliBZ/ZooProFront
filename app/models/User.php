@@ -264,4 +264,17 @@ class User
         return $row[0];
     }
 
+    public function updatePic($file){
+        $this->db->query('UPDATE `users` SET `image` = :file WHERE id = "' . $_SESSION["id"] . '" ');
+        //Bind values
+        $this->db->bind(':file', $file);
+
+        //Execute function
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
