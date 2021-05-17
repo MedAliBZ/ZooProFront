@@ -51,6 +51,15 @@ class Pages extends Controller {
     public function animauxInEnclos() {
         $this->view('animauxInEnclos');
     }
+    
+    public function evenement() {
+        $this->view('evenement');
+    }
+
+    
+    public function sponsor() {
+        $this->view('sponsor');
+    }
 
 
 

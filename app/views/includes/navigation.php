@@ -23,14 +23,8 @@
                                                 <li><a href="<?php echo URLROOT ?>/planteC/afficherList">végétation</a></li>
 
                                                 <li><a href="<?php echo URLROOT ?>/enclos/afficherList">Enclos</a></li>
-                                                <li><a href="#">Projects</a></li>
-                                                <li><a href="#">Blog</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="#">Blog</a></li>
-                                                        <li><a href="#">Blog Details</a></li>
-                                                        <li><a href="#">Element</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><a href="<?php echo URLROOT ?>/evenement/afficherList">Evenements</a></li>
+                                                <li><a href="<?php echo URLROOT ?>/sponsor/afficherList">Sponsors</a></li>
                                                 <li><a href="<?php echo URLROOT ?>/Pages/profile">Profile</a></li>
                                             </ul>
                                         </nav>
