@@ -93,45 +93,39 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo mb-35">
-                                        <a href="<?php echo URLROOT ?>/Pages/index"><img src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png" alt=""></a>
+                                        <a href="<?php echo URLROOT ?>/Pages/index"><img
+                                                src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png"
+                                                alt=""></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
-                                            <p>The automated process starts as soon as your clothes go into the machine.</p>
+                                            <p>Air, terre et mer nous devons les protéger. Car Dame Nature, c'est notre
+                                                liberté !</p>
                                         </div>
                                     </div>
-                                    <!-- social -->
-                                    <div class="footer-social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
                             <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Our solutions</h4>
-                                    <ul>
-                                        <li><a href="#">Design & creatives</a></li>
-                                        <li><a href="#">Telecommunication</a></li>
-                                        <li><a href="#">Restaurant</a></li>
-                                        <li><a href="#">Programing</a></li>
-                                        <li><a href="#">Architecture</a></li>
-                                    </ul>
-                                </div>
+
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Company</h4>
+                                    <h4>Zoo</h4>
                                     <ul>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Review</a></li>
-                                        <li><a href="#">Insights</a></li>
-                                        <li><a href="#">Carrier</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/Pages/index">Home</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/Pages/profile">Profile</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/animauxC/afficherList">Animaux</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/planteC/afficherList">Végétation</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/enclos/afficherList">Enclos</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/evenement/afficherList">Evenements</a></li>
+                                        <li><a href="<?php echo URLROOT ?>/sponsor/afficherList">Sponsors</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -139,12 +133,11 @@
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    <h4>Contact us</h4>
+                                    <h4>Contactez nous</h4>
                                     <ul>
-                                        <li><a href="#">consulto98@gmail.com</a></li>
-                                        <li><a href="#">76/A, Green road, NYC</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
-                                        <li class="number"><a href="#">(80) 783 367-3904</a></li>
+                                        <li><a href="#">zooproresetpass@gmail.com</a></li>
+                                        <li><a href="#">Hay Ghazela City</a></li>
+                                        <li class="number"><a href="#">(+216) 71 205 167</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -153,32 +146,9 @@
                 </div>
             </div>
             <!-- footer-bottom area -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12 ">
-                                <div class="footer-copy-right text-center">
-                                    <p>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;<script>
-                                            document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    </p>
-                                    <div class="text-center">
-                                        <a href="http://localhost/Zoo//sponso/afficherList?lang=en"><?php echo $lang   ['lang_en'] ?></a> 
-                                        |<a href="http://localhost/Zoo//sponsor/afficherList?lang=fr"><?php echo $lang   ['lang_fr'] ?></a> 
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- Footer End-->
         </div>
-
     </footer>
     <!-- Scroll Up -->
     <div id="back-top">
