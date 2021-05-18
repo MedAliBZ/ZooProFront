@@ -1,5 +1,5 @@
 <?php if (!isset($_SESSION['id']))
-    header('location: ' . URLROOT . '/index');
+    header('location: ' . URLROOT . '/profile');
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -122,10 +122,49 @@
                     </div>
                 </div>
             </div>
-            <div id="map"></div>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly" async></script>
+            <!-- comment affichage -->
+            <section class="regimeContainer">
+                <form action="<?php echo URLROOT; ?>/animauxC/afficherComment" method="post" class="afficherRegime">
+                    <input type="text" id="animalID1" name="animalID1" style="display: none;">
+                    <input class="button button-contactForm btn_1 boxed-btn" type="submit" value="Liste des commentaires " id="regimeButton"  />
+                </form>
 
+                <div class="comments-area" style="margin-left: 5%;">
+                    <?php if (isset($data['commentNumber'])) {
+                        echo $data['commentNumber'];
+                    } ?>
+                    <!-- number comments count-->
+                    <div class="comment-list">
+                        <?php if (isset($data['comment1'])) {
+                            echo $data['comment1'];
+                        } ?>
+                    </div>
+                </div>
+            </section>
+           
+            <!-- end comment affichage -->
+            <!-- comment form -->
 
+            <div class="comment-form" style="margin-left: 15%;margin-right:15%;">
+                <form class="form-contact comment_form" action="<?php echo URLROOT; ?>/animauxC/addComment" id="commentForm" method="POST">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="écrire un Commentaire" required></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <textarea name="userName" id="userName"  style="display: none;">   </textarea>
+
+                    <textarea name="animalID" id="animalID"  style="display: none;">  </textarea>
+                    <textarea name="imageUser" id="imageUser"  style="display: none;">  </textarea>
+                    <div class="form-group">
+                        <button type="submit" class="button button-contactForm btn_1 boxed-btn">Ajouter Commentaire</button>
+                    </div>
+                </form>
+            </div>
+            <!-- comment form end-->
         </section>
         <!-- table start -->
         <section class="regimeContainer">
@@ -153,9 +192,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo mb-35">
-                                        <a href="<?php echo URLROOT ?>/Pages/index"><img
-                                                src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png"
-                                                alt=""></a>
+                                        <a href="<?php echo URLROOT ?>/Pages/index"><img src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png" alt=""></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">

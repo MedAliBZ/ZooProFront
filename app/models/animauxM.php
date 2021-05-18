@@ -84,4 +84,46 @@ class animauxM
         }
     }
 
+    public function addCommentM($data)
+    {
+        $this->db->query('INSERT INTO comments (userName,comment,animalID,imageUser) VALUES(:userName,:comment,:animalID,:imageUser)');
+
+        //Bind values
+        $this->db->bind(':comment', $data['comment']);
+        $this->db->bind(':userName', $data['userName']);
+        $this->db->bind(':animalID', $data['animalID']);
+        $this->db->bind(':imageUser', $data['imageUser']);
+        //Execute function
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function getNbrComments($animalID)
+    {
+        $this->db->query('SELECT COUNT(*) FROM `comments` where animalID=:animalID');
+        $this->db->bind(':animalID', $animalID);
+        return $this->db->resultSet();
+    }
+      
+    public function afficherComment($animalID){
+        $this->db->query('SELECT * FROM comments where animalID=:animalID ');
+        $this->db->bind(':animalID', $animalID);
+        return $this->db->resultSet();
+    }
+
+    public function getUserByID(){
+        $this->db->query('SELECT username  FROM users where id=:id ');
+        $this->db->bind(':id', $_SESSION['id']);
+        return $this->db->resultSet();
+    }
+
+    public function getImageUserByID(){
+        $this->db->query('SELECT image  FROM users where id=:id ');
+        $this->db->bind(':id', $_SESSION['id']);
+        return $this->db->resultSet();
+    }
+
 }

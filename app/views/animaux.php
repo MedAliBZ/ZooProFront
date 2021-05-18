@@ -78,11 +78,22 @@
         </div>
 
         <div style="display: none;">
-        <?php if (isset($data['email'])) {
+            <?php if (isset($data['email'])) {
                 echo $data['email'];
             } ?>
         </div>
 
+        <div style="display: none;">
+            <?php if (isset($data['userName'])) {
+                echo $data['userName'];
+            } ?>
+        </div>
+
+        <div style="display: none;">
+            <?php if (isset($data['imageUser'])) {
+                echo $data['imageUser'];
+            } ?>
+        </div>
 
     </main>
     <footer>
@@ -96,9 +107,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo mb-35">
-                                        <a href="<?php echo URLROOT ?>/Pages/index"><img
-                                                src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png"
-                                                alt=""></a>
+                                        <a href="<?php echo URLROOT ?>/Pages/index"><img src="<?php echo URLROOT ?>/public/assets/img/logo/logo2_footer.png" alt=""></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
