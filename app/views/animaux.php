@@ -77,23 +77,6 @@
 
         </div>
 
-        <div style="display: none;">
-            <?php if (isset($data['email'])) {
-                echo $data['email'];
-            } ?>
-        </div>
-
-        <div style="display: none;">
-            <?php if (isset($data['userName'])) {
-                echo $data['userName'];
-            } ?>
-        </div>
-
-        <div style="display: none;">
-            <?php if (isset($data['imageUser'])) {
-                echo $data['imageUser'];
-            } ?>
-        </div>
 
     </main>
     <footer>

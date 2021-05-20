@@ -1,17 +1,10 @@
 
 $(".tblRows").click(function () {
-  var row_data1 = $(this).attr("data");
+  let row_data1 = $(this).attr("data");
   console.log(row_data1);
   //here
-  let emailString = document.getElementById("email").textContent;
- 
-  let UserNameString = document.getElementById("userName").textContent;
-  console.log(UserNameString);
-  let ImageUserString = document.getElementById("imageUser").textContent;
-  console.log(ImageUserString);
-  var row_data = row_data1 + "-" + emailString + "-" + UserNameString+"-"+ImageUserString;
   
-  localStorage.setItem("vOneLocalStorage", row_data);
+  localStorage.setItem("vOneLocalStorage", row_data1);
 }) 
 
 

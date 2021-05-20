@@ -30,20 +30,8 @@ class animauxC extends Controller
             ';
         }
 
-        $email = $this->animauxModel->findEmailByID();
-        foreach ($email as $key => $value) {
-            $data['email'] .= '
-            <h3  id="email"> ' . $value[0] . '</h3> 
-            ';
-        }
 
         //set username 
-        $userName = $this->animauxModel->getUserByID();
-        $data['userName'] .=  '<h3  id="userName"> ' .$userName[0][0].'</h3> ';
-        
-        //set image
-        $imageUser = $this->animauxModel->getImageUserByID();
-        $data['imageUser'] .=  '<h3  id="imageUser"> ' .$imageUser[0][0].'</h3> ';
 
 
         $this->view('animaux', $data);
@@ -57,7 +45,7 @@ class animauxC extends Controller
             'email' =>  trim($_POST['email']),
             'reclamation' =>  trim($_POST['reclamation'])
         ];
-        mail($data['email'], "Réclamation", "on va prendre votre réclamation en considération merci", "From: mhedhbi.meriamepb@gmail.com");
+        mail($data['email'], "Réclamation", "on va prendre votre réclamation en considération merci",'From: zooproresetpass@gmail.com');
 
         $this->animauxModel->addReclamation($data);
         $this->view('detailAnimal', $data);

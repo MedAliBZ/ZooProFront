@@ -3,7 +3,7 @@ var vOneLS = localStorage.getItem("vOneLocalStorage");
 let chaine = vOneLS;
 console.log(chaine);
 let data= chaine.split("-"); 
-console.log(data[9]);
+
 
 //set name
 document.querySelector("#animalName").innerHTML = data[1];
@@ -42,13 +42,7 @@ dataQR="id animal : "+data[0]+", Nom animal : "+data[1] + " , type animal : "+da
 document.getElementById('QRCodePic').src="http://api.qrserver.com/v1/create-qr-code/?data="+dataQR;
 
 
-//form email
-//set email
-document.querySelector("#email").value = data[8];
-//set userName
-document.querySelector("#userName").value = data[9];
-//set image
-document.querySelector("#imageUser").value = data[10];
+
 
 
 function validateString(str) {

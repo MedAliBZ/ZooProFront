@@ -1,5 +1,5 @@
 <?php if (!isset($_SESSION['id']))
-    header('location: ' . URLROOT . '/profile');
+    header('location: ' . URLROOT . '/users/login');
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
@@ -96,7 +96,7 @@
                     <form action="<?php echo URLROOT; ?>/animauxC/SendEmail" id="formEmail" method="POST" class="form-container">
                         <h2> Merci pour tous vos réclamations</h2>
                         <div class="formCss">
-                            <input type="email" id="email" name="email" readonly />
+                            <input type="email" id="email" name="email" value="<?php echo $_SESSION['email']; ?>" readonly />
                         </div>
                         <h4> vous recevrez un mail dés que votre réclamation est ajouté</h4>
                         <div class="formCss">
@@ -155,10 +155,10 @@
                         </div>
 
                     </div>
-                    <textarea name="userName" id="userName"  style="display: none;">   </textarea>
+                    <textarea name="userName" id="userName" style="display: none;"><?php echo $_SESSION['username']; ?></textarea>
 
                     <textarea name="animalID" id="animalID"  style="display: none;">  </textarea>
-                    <textarea name="imageUser" id="imageUser"  style="display: none;">  </textarea>
+                    <textarea name="imageUser" id="imageUser"  style="display: none;"><?php echo $_SESSION['image']; ?></textarea>
                     <div class="form-group">
                         <button type="submit" class="button button-contactForm btn_1 boxed-btn">Ajouter Commentaire</button>
                     </div>
