@@ -86,13 +86,12 @@ class animauxM
 
     public function addCommentM($data)
     {
-        $this->db->query('INSERT INTO comments (userName,comment,animalID,imageUser) VALUES(:userName,:comment,:animalID,:imageUser)');
+        $this->db->query('INSERT INTO comments (userName,comment,animalID) VALUES(:userName,:comment,:animalID)');
 
         //Bind values
         $this->db->bind(':comment', $data['comment']);
         $this->db->bind(':userName', $data['userName']);
         $this->db->bind(':animalID', $data['animalID']);
-        $this->db->bind(':imageUser', $data['imageUser']);
         //Execute function
         if ($this->db->execute()) {
             return true;
@@ -109,7 +108,7 @@ class animauxM
     }
       
     public function afficherComment($animalID){
-        $this->db->query('SELECT * FROM comments where animalID=:animalID ');
+        $this->db->query('SELECT id_comment,comment,`comments`.userName,animalID,users.image FROM `comments`,users WHERE comments.userName=users.username AND animalID=:animalID ');
         $this->db->bind(':animalID', $animalID);
         return $this->db->resultSet();
     }
