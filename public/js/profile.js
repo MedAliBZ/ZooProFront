@@ -1,5 +1,11 @@
-document.querySelector(".input-file").addEventListener("change",()=>{
-    document.querySelector('.profilePic').style.backgroundImage= `url('../Images/${document.querySelector(".input-file").value.replace('C:\\fakepath\\','')}')`;
+document.querySelector(".input-file").addEventListener("change", (event) => {
+    var input = event.target;
+    var reader = new FileReader();
+    reader.onload = function () {
+        var dataURL = reader.result;
+        document.querySelector('.profilePic').style.backgroundImage = `url(${dataURL})`;
+    };
+    reader.readAsDataURL(input.files[0]);
 })
 
 let cardNewPass = document.getElementById('card-newPass');

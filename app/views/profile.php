@@ -83,7 +83,7 @@ require APPROOT . '/views/includes/navigation.php';
     <section class="contact-section">
         <div class="container" style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-bottom: 50px;">
             <h2 class="contact-title">Photo de profile</h2>
-            <form method="POST" action="<?php echo URLROOT; ?>/users/deleteUpdatePic" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+            <form enctype="multipart/form-data" method="POST" action="<?php echo URLROOT; ?>/users/deleteUpdatePic" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
                 <div class="profilePic" style="background-image: url('<?php echo URLROOT; ?>/Images/<?php echo $_SESSION['image']; ?>');"></div>
                 <div style="display: flex;flex-direction:column;justify-content: center;align-items: center;">
                     <label for="file" class="label-file">Choisir une image</label>

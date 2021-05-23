@@ -13,17 +13,32 @@ class Users extends Controller
                 $_SESSION['image']="default.jpg";
         } 
         elseif (isset($_POST['save'])) {
-            $data = [
-                'file' => ''
-            ];
-
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                // Process form
-                // Sanitize POST data
-                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+                //uploading image to server
+                $file = $_FILES['file'];
+                $fileName = $file['name'];
+                $fileTmpName = $file['tmp_name'];
+                $fileError = $file['error'];
+
+
+                $fileExt = explode('.', $fileName);
+                $fileActualExt = strtolower(end($fileExt));
+
+                $allowed = array('jpg', 'jpeg', 'png');
+
+                if (in_array($fileActualExt, $allowed)) {
+                    if ($fileError === 0) {
+                        $fileNameNew = uniqid('', true) . "." . $fileActualExt;
+                        $fileDestination = 'D:\\xampp\\htdocs\\integrationZooPro\\public\\img\\' . $fileNameNew;
+                        $secondDestination = 'D:\\xampp\\htdocs\\frontend-project\\public\\Images\\' . $fileNameNew;
+                        move_uploaded_file($fileTmpName, $fileDestination);
+                        copy($fileDestination, $secondDestination);
+                    }
+                }
+                //upload over
 
                 $data = [
-                    'file' => trim($_POST['file'])
+                    'file' => $fileNameNew
                 ];
                 if($this->userModel->updatePic($data['file']))
                     $_SESSION['image']=$data['file'];
